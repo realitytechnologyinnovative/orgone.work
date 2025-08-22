@@ -1,13 +1,151 @@
-.logo_main{
+/* Custom CSS - Additional site-specific styles */
+
+/* Logo styles */
+.logo_main {
     width: 13%;
 }
 
-.footer_logo{
+.footer_logo {
     width: 20%;
 }
 
-.new_techstatement{
+/* Technology statement */
+.new_techstatement {
     color: #000;
     font-size: 1.2rem;
-    font-weight:500;
+    font-weight: 500;
+}
+
+/* Header styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.header.scrolled {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header-hidden {
+    transform: translateY(-100%);
+}
+
+/* Navigation styles */
+.navbar-nav .nav-link {
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #e67817;
+}
+
+/* Button styles */
+.btn-primary {
+    background: #e67817;
+    border-color: #e67817;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #d4690f;
+    border-color: #d4690f;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 120, 23, 0.3);
+}
+
+/* Section styles */
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+/* Card styles */
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Form styles */
+.form-control {
+    border-radius: 10px;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #e67817;
+    box-shadow: 0 0 0 0.2rem rgba(230, 120, 23, 0.25);
+}
+
+.form-control.error {
+    border-color: #dc3545;
+}
+
+/* Footer styles */
+.footer {
+    background: #333;
+    color: white;
+    padding: 60px 0 30px;
+}
+
+.footer a {
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #e67817;
+}
+
+/* Utility classes */
+.text-primary { color: #e67817 !important; }
+.bg-primary { background-color: #e67817 !important; }
+.border-primary { border-color: #e67817 !important; }
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+    .logo_main {
+        width: 25% !important;
+    }
+    
+    .footer_logo {
+        width: 30% !important;
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
 }
