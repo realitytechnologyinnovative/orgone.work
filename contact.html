@@ -1,0 +1,149 @@
+---
+layout: default
+title: Contact Us
+---
+
+<main class="main">
+    <!-- promo primary start-->
+    <section class="promo-primary">
+        <div class="overlay"></div>
+        <picture>
+            <source srcset="{{ site.baseurl }}/assets/orgone/slider2.jpg" media="(min-width: 992px)"/><img class="jarallax-img img-bg" src="{{ site.baseurl }}/assets/img/contacts.jpg" alt="img"/>
+        </picture>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="align-container">
+                        <div class="align-item"><span>Orgone Limited</span>
+                            <h1 class="title">Our Contacts</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- promo primary end-->
+    
+    <!-- get in touch start-->
+    <section class="section get-in-touch">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-wrapper" style="background-image: url({{ site.baseurl }}/assets/img/world-map.png);">
+                        <!-- contact form start-->
+                        <form class="form contact--form contacts-page-form" id="get-in-touch" autocomplete="off" method="post">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="title-block">
+                                        <h3 class="title">Get in <span>Touch</span></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="input-label">
+                                        <input class="form-field input input-name" id="input-name" type="text" name="name" required="required"/><span>Name</span>
+                                    </label>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="input-label">
+                                        <input class="form-field input input-text" id="input-text" type="text" name="subject" required="required"/><span>Subject</span>
+                                    </label>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="input-label">
+                                        <input class="form-field input input-tel" id="input-tel" type="tel" name="phone" required="required"/><span>Phone</span>
+                                    </label>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="input-label">
+                                        <input class="form-field input input-mail" id="input-mail" type="email" name="email" required="required"/><span>Email</span>
+                                    </label>
+                                </div>
+                                <div class="col-12">
+                                    <label class="textarea-label">
+                                        <textarea class="form-field textarea" id="textarea" name="message"></textarea><span>Message</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="button-holder">
+                                        <button class="button button--transparent" type="submit" data-hover="Send"><span>Send</span></button>
+                                        <div class="form__note"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- contact form end-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- get in touch end-->
+    
+    <!-- map section start-->
+    <section class="section map-section no-padding-top no-padding-bottom">
+        <!-- contacts-banner start-->
+        <div class="contacts-banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="title-block">
+                            <h2 class="title">. <span>Our</span> Contacts</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contact-item">
+                            <div class="icon-holder">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            </div>
+                            <div class="content-holder">
+                                <h4 class="title">Address</h4>
+                                <p>AN5 Junction Road, By kazaure Road Close to Lagos Street Roundabout, Ahmadu Bello Way, Kaduna</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contact-item">
+                            <div class="icon-holder">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                            </div>
+                            <div class="content-holder">
+                                <h4 class="title">Phone</h4>
+                                <p>+234 902 522 2285<br>+234 815 476 6466</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contact-item">
+                            <div class="icon-holder">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </div>
+                            <div class="content-holder">
+                                <h4 class="title">Email</h4>
+                                <p>info@orgone.work</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- contacts-banner end-->
+        
+        <!-- map start-->
+        <div class="map" 
+            id="map" 
+            data-api-key="AIzaSyCzCcoXsBXYyi_WEVZdePfj12WkQJRaqNo" 
+            data-longitude="7.4286" 
+            data-latitude="10.5077" 
+            data-marker="{{ site.baseurl }}/assets/orgone/logo.png">
+        </div>
+        <!-- map end-->
+    </section>
+    <!-- map section end-->
+</main>

@@ -1,0 +1,376 @@
+{% extends "base.html" %}
+{% load custom_filters %}
+
+
+{% block content %}
+<main class="main">
+    <!-- promo primary start-->
+    <section class="promo-primary">
+        <div class="overlay"></div>
+        <picture>
+            <source srcset="{{ project.background_image.url }}" media="(min-width: 992px)"/><img class="jarallax-img img-bg" src="{{ project.background_image.url }}" alt="img"/>
+        </picture>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="align-container">
+                        <div class="align-item"><span>Orgone</span>
+                            <h1 class="title">{{ project.name }}</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- promo primary end-->
+    <!-- cases details start-->
+    <section class="section cases-details no-padding-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-7">
+                    <!-- information block start-->
+                    <div class="information-block">
+                        <div class="title-block">
+                            <h3 class="title">Information</h3>
+                        </div>
+                        <div class="information-details">
+                            <div class="row">
+                                <div class="col-sm-4 col-6">
+                                    <div class="detail">
+                                        <svg class="icon">
+                                            <use xlink:href="#locationpin"></use>
+                                        </svg><span>{{ project.location }}</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-6">
+                                    <div class="detail">
+                                        <svg class="icon">
+                                            <use xlink:href="#comment"></use>
+                                        </svg><span>{{ project.views }} Views</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-12">
+                                    <div class="detail">
+                                        <svg class="icon">
+                                            <use xlink:href="#calendar"></use>
+                                        </svg><span>{{ project.availability }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="information-content">
+                            {{ project.description|linebreaks }}
+                        </div>
+                    </div>
+                    <!-- information block end-->
+                    <!-- technical block start-->
+                    <div class="technical-block">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="title-block">
+                                    <h3 class="title">Additional Information</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="technical-content">
+                            <div class="row">
+                                {% for spec in project.technical_specs.all %}
+                                <div class="col-sm-6">
+                                    <!-- technical item start-->
+                                    <figure class="technical-item">
+                                        <div class="img-holder">
+                                            <svg class="icon">
+                                                <use xlink:href="#{{ spec.name|slugify }}"></use>
+                                            </svg>
+                                        </div>
+                                        <figcaption>
+                                            <span class="title">{{ spec.name }}</span>
+                                            <p>{{ spec.value }}</p>
+                                        </figcaption>
+                                    </figure>
+                                    <!-- technical item end-->
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>                        
+                    </div>
+
+                    {% comment "" %}
+                    <!-- additional block start-->
+                    <div class="additionals-block">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="title-block">
+                                    <h3 class="title">Additional Characteristic</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <!-- table start-->
+                                <div class="primary-table characteristics-table">
+                                    <div class="thead">
+                                        <div class="table-row">
+                                            <div class="table-cell">
+                                                <h5 class="title">Name</h5>
+                                            </div>
+                                            <div class="table-cell">
+                                                <h5 class="title">Value 1</h5>
+                                            </div>
+                                            <div class="table-cell">
+                                                <h5 class="title">Value 2</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tbody">
+                                        <div class="table-row">
+                                            <div class="table-cell">Height</div>
+                                            <div class="table-cell">72″</div>
+                                            <div class="table-cell">72″</div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell">Height</div>
+                                            <div class="table-cell">33″</div>
+                                            <div class="table-cell">44″</div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell">Depth</div>
+                                            <div class="table-cell">35″</div>
+                                            <div class="table-cell">35″</div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell">Weight</div>
+                                            <div class="table-cell">510 lbs.</div>
+                                            <div class="table-cell">610 lbs.</div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell">Electrical</div>
+                                            <div class="table-cell">115 VAC</div>
+                                            <div class="table-cell">120 VAC</div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell">Certifications</div>
+                                            <div class="table-cell">UL</div>
+                                            <div class="table-cell">CE</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- table end-->
+                            </div>
+                        </div>
+                    </div>
+                    {% endcomment %}
+                    <!-- additional block end-->
+                </div>
+                <div class="col-xl-5 offset-xl-1 col-lg-5">
+                    <!-- recommendation block start-->
+                    <div class="recommendation-block">
+                        <div class="title-block">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h4 class="title">Installation Information</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recommendation-details">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-3 col-6">
+                                    <!-- detail item start-->
+                                    <div class="detail-item"><span class="title">Power</span>
+                                        <p>{{ project.power }}</p>
+                                    </div>
+                                    <!-- detail item end-->
+                                </div>
+                                <div class="col-lg-6 col-md-3 col-6">
+                                    <!-- detail item start-->
+                                    <div class="detail-item"><span class="title">Starting Price</span>
+                                        <p>{{ project.starting_price }}</p>
+                                    </div>
+                                    <!-- detail item end-->
+                                </div>
+                                <div class="col-lg-6 col-md-3 col-6">
+                                    <!-- detail item start-->
+                                    <div class="detail-item"><span class="title">Yearly ouyput</span>
+                                        <p>{{ project.yearly_output }}</p>
+                                    </div>
+                                    <!-- detail item end-->
+                                </div>
+                                <div class="col-lg-6 col-md-3 col-6">
+                                    <!-- detail item start-->
+                                    <div class="detail-item"><span class="title">10 Year Savings</span>
+                                        <p>{{ project.ten_year_saving }}</p>
+                                    </div>
+                                    <!-- detail item end-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <div class="row">
+                                <div class="col-12"><span class="title">Products</span>
+                                    <p>{{ project.product_inputs }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-holder">
+                            <div class="row">
+                                <div class="col-12"><a class="button button--transparent" href="{% url "contact" %}" data-hover="Contact Installer"><span>Contact Us Today</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- recommendation block end-->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- cases details end-->
+    <!-- project gallery start-->
+    <section class="section project-gallery-section no-padding-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="heading primary-heading">
+                        <h5 class="subtitle"><span>Project</span> <span>Gallery</span></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row no-gutters">
+            <div class="col-12">
+                <div class="project-gallery-holder">
+                    <div class="project-gallery">
+                        {% for image in project.gallery.all %}
+                        <a class="gallery-item" href="{{ image.image.url }}" data-fancybox="project-gallery">
+                            <div class="overlay"></div>
+                            <img class="img-bg" src="{{ image.image.url }}" alt="{{ project.name }} gallery image"/>
+                        </a>
+                        {% endfor %}
+                    </div>
+                    <div class="project-gallery-dots"></div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <!-- project gallery end-->
+    <!-- testimonials-primary start-->
+    {% if project.testimonials.all %} 
+    <section class="section testimonials testimonials--primary">
+        <div class="slider-holder">
+            <div class="wrapper">
+                <div class="container">
+                    <div class="row align-items-end">
+                        <div class="col-xl-9 col-md-8">
+                            <div class="testimonials-top">
+                                <div class="quote-icon"><span>“ </span></div>
+                                <div class="heading primary-heading">
+                                    <h3 class="title">Testimonials</h3>
+                                    <h5 class="subtitle"><span>What {{ project.name|first_word_before_space  }} </span> <span>are saying</span></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-md-4">
+                            <div class="testimonials-dots"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-10 offset-xl-1">
+                            <!-- testimonials slider start-->
+                            <div class="testimonials-slider testimonials-primary-slider">
+                                <!-- item start-->
+                                {% for testimonial in project.testimonials.all %}
+                                    <div class="slider-item">
+                                        <p>{{ testimonial.quote }}</p>
+                                        <span class="user"><span class="name">{{ testimonial.name|linebreaks }}</span>, <span class="position">{{ testimonial.title }}</span></span>
+                                    </div>
+                                {% endfor %}
+                                <!-- item end-->
+                            </div>
+                            <!-- testimonials slider end-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- testimonials-primary end-->
+    <!-- brands start-->    
+    <section class="section brands no-padding-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- brands slider start-->
+                    <div class="brands-holder">
+                        <div class="brands-slider">
+                            <!-- item start-->
+                            <div class="slider-item"><img src="/static/orgone/partners/1.webp" alt="brand"/></div>
+                            <!-- item end-->
+                            <!-- item start-->
+                            <div class="slider-item"><img src="/static/orgone/partners/2.webp" alt="brand"/></div>
+                            <!-- item end-->
+                            <!-- item start-->
+                            <div class="slider-item"><img src="/static/orgone/partners/3.webp" alt="brand"/></div>
+                            <!-- item end-->
+                            <!-- item start-->
+                            <div class="slider-item"><img src="/static/orgone/partners/4.webp" alt="brand"/></div>
+                            <!-- item end-->
+                            <!-- item start-->
+                            <div class="slider-item"><img src="/static/orgone/partners/5.webp" alt="brand"/></div>
+                            <!-- item end-->
+                            <!-- item start-->
+                            <div class="slider-item"><img src="/static/orgone/partners/6.webp" alt="brand"/></div>
+                            <!-- item end-->
+                            <!-- item start-->
+                            <div class="slider-item"><img src="/static/orgone/partners/7.webp" alt="brand"/></div>
+                            <!-- item end-->
+                            <!-- item start-->
+                            <div class="slider-item"><img src="/static/orgone/partners/8.webp" alt="brand"/></div>
+                            <!-- item end-->
+                            <!-- item start-->
+                            <div class="slider-item"><img src="/static/orgone/partners/9.webp" alt="brand"/></div>
+                            <!-- item end-->
+                            <!-- item start-->
+                            <div class="slider-item"><img src="/static/orgone/partners/10.webp" alt="brand"/></div>
+                            <!-- item end-->
+                            <!-- item start-->
+                            <div class="slider-item"><img src="/static/orgone/partners/11.webp" alt="brand"/></div>
+                            <!-- item end-->
+                            <!-- item start-->
+                            <div class="slider-item"><img src="/static/orgone/partners/12.webp" alt="brand"/></div>
+                            <!-- item end-->
+                            <!-- item start-->
+                            <div class="slider-item"><img src="/static/orgone/partners/13.webp" alt="brand"/></div>
+                            <!-- item end-->
+                            <!-- item start-->
+                            <div class="slider-item"><img src="/static/orgone/partners/14.webp" alt="brand"/></div>
+                            <!-- item end-->
+                            <!-- item start-->
+                            <div class="slider-item"><img src="/static/orgone/partners/15.webp" alt="brand"/></div>
+                            <!-- item end-->
+                            <!-- item start-->
+                            <div class="slider-item"><img src="/static/orgone/partners/16.webp" alt="brand"/></div>
+                            <!-- item end-->
+                            <!-- item start-->
+                            <div class="slider-item"><img src="/static/orgone/partners/17.webp" alt="brand"/></div>
+                            <!-- item end-->
+                            <!-- item start-->
+                            <div class="slider-item"><img src="/static/orgone/partners/18.webp" alt="brand"/></div>
+                            <!-- item end-->
+                            <!-- item start-->
+                            <div class="slider-item"><img src="/static/orgone/partners/19.webp" alt="brand"/></div>
+                            <!-- item end-->
+                        </div>
+                        <div class="brands-dots"></div>
+                    </div>
+                    <!-- brands slider end-->
+                </div>
+            </div>
+        </div>
+    </section>
+	{% endif %}
+</main>
+{% endblock content %}
+

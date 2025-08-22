@@ -1,0 +1,62 @@
+<!-- header start-->
+<header class="header header--style-1" id="header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 column">
+                <!-- logo block start-->
+                <div class="logo-block"><a class="logo" href="{{ site.baseurl }}/">
+                    <img src="{{ site.baseurl }}/assets/img/logo.png" class="logo_main" alt="">
+                    <span>Orgone </span></a></div>
+                <!-- logo block end-->
+                <!-- menu block start-->
+                <div class="menu-block">
+                    <!-- main menu start-->
+                    <nav class="menu-holder">
+                        <ul class="main-menu">
+                            <li class="menu-item {% if page.url == "/" %}active{% endif %}"><a href="{{ site.baseurl }}/"><span>Home</span></a></li>
+                            <li class="menu-item" {% if page.url == "/about/" %}active{% endif %}><a href="{{ site.baseurl }}/about/"><span>About</span></a></li>
+                            <li class="menu-item" {% if page.url == "/project/" %}active{% endif %}><a href="{{ site.baseurl }}/project/"><span>Projects</span></a></li>
+                            <li class="menu-item" {% if page.url == "/gallary/" %}active{% endif %}><a href="{{ site.baseurl }}/gallary/"><span>Project Gallery</span></a></li>
+                            <li class="menu-item" {% if page.url == "/blog/" %}active{% endif %}><a href="{{ site.baseurl }}/blog/"><span>Blog</span></a></li>
+                            <li class="menu-item menu-item--has-child {% if page.url == "/shop/" %}active{% endif %}"><a href="javascript:void(0);"><span>Shoping</span></a>
+                                <!-- sub-menu start-->
+                                <ul class="sub-menu">
+                                    <li><a href="{{ site.baseurl }}/product_cataloge/">Inverters</a></li>
+                                    <li><a href="{{ site.baseurl }}/product_cataloge/">Batteries</a></li>
+                                    <li><a href="{{ site.baseurl }}/cart/">Cart</a></li>
+                                    <li><a href="{{ site.baseurl }}/checkout/">Checkout</a></li>
+                                    <li><a href="{{ site.baseurl }}/signin/">Account</a></li>
+                                </ul>
+                                <!-- sub-menu end-->
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- main menu end-->
+                </div>
+                <!-- menu block end-->
+                <!-- lang block start-->
+                <div class="lang-block">
+                    <ul class="lang-select">
+                        <li class="lang-item active"><span>Account</span>
+                            <ul class="sub-list">
+                                <li class="lang-item"><a href="{{ site.baseurl }}/signin/">Sign In</a></li>
+                                <li class="lang-item"><a href="{{ site.baseurl }}/signup/">Register</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    <a class="button button--transparent" href="{{ site.baseurl }}/contact/" data-hover="Get In Touch"><span>Contact Us</span></a>
+                    <!-- menu-trigger start-->
+                    <div class="hamburger">
+                        <div class="hamburger-box">
+                            <div class="hamburger-inner"></div>
+                        </div>
+                    </div>
+                    <!-- menu-trigger end-->
+                </div>
+                <!-- lang block end-->
+            </div>
+        </div>
+    </div>
+</header>
+<!-- header end-->

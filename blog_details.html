@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<main class="main">
+    <!-- promo primary start-->
+    <section class="promo-primary">
+        <div class="overlay"></div>
+        <picture>
+            <source srcset="{{ blog.main_image.url }}" media="(min-width: 992px)"/><img class="jarallax-img img-bg" src="{{ blog.main_image.url }}" alt="img"/>
+        </picture>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="align-container">
+
+                        <div class="align-item"><span>Orgone Limited</span>
+                            <h1 class="title">{{ blog.title }}</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- promo primary end-->
+    <!-- blog detail start-->
+    <section class="section blog-detail">
+        <div class="row">
+            <div class="col-md-7 col-lg-12 col-xl-8">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-10 offset-xl-2 col-lg-10 offset-lg-1">
+                            <!-- promo holder start-->
+                            <div class="promo-holder"><img src="{{ blog.landing_image.url }}" alt="img"/></div>
+                            <!-- promo holder end-->
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-10 offset-xl-2 col-lg-10 offset-lg-1">
+                            <!-- author start-->
+                            <div class="author">
+                                <div class="author-block">
+                                    <div class="img-holder"><img class="img-bg" src="/static/orgone/logo.png" alt="img"/></div><span class="name">{{ blog.author }}</span>
+                                </div>
+                                <div class="date-block">
+                                    <svg class="icon">
+                                        <use xlink:href="#calendar"></use>
+                                    </svg><span class="date">{{ blog.timestamp}}</span>
+                                </div>
+                            </div>
+                            <!-- author end-->
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-10 offset-xl-2 col-lg-10 offset-lg-1">
+                            <!-- content block start-->
+                            <div class="content-block">
+                                <p> {{ blog.content|linebreaks }}</p>
+                                <div class="iframe-holder embed-responsive embed-responsive-16by9">
+                                    <iframe class="responsive-iframe" src="{{ blog.embed_url }}" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                </div>
+                            </div>
+                            <!-- content block end-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-8 offset-sm-2 col-md-5 offset-md-0 col-lg-4 col-xl-3">
+                <div class="articles__inner">
+                    <h4 class="articles__title">Other Posts</h4>
+                    {% for random_blog in random_blogs %}
+                        {% if random_blog == blog %}
+                        No Posts
+                        {% else %}
+                            <div class="recent-item">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="recent-item__img"><img class="img-bg" src="{{ random_blog.landing_image.url }}" alt="img"/></div>
+                                    </div>
+                                    <div class="col-8">
+                                        <h6 class="recent-item__title"><a class="recent-item__link" href="{% url 'blog_detail' blog.pk %}">{{ blog.title }}</a></h6><span class="recent-item__date">31/12</span>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                
+            </div>
+        </div>
+
+    </section>
+    <!-- blog detail end-->
+</main>
+{% endblock content %}
+

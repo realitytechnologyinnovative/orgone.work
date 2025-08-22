@@ -1,0 +1,296 @@
+---
+layout: default
+title: Product Catalog
+---
+
+<main class="main">
+    <section class="promo-primary promo-primary--shop">
+        <div class="overlay"></div>
+        <picture>
+            <source srcset="{{ site.baseurl }}/assets/orgone/slider3.jpg" media="(min-width: 992px)"/><img class="jarallax-img img-bg" src="{{ site.baseurl }}/assets/orgone/slider3.jpg" alt="img"/>
+        </picture>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="align-container">
+                        <div class="align-item">
+                            <h1 class="title">Product Catalog</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- catalog start-->
+    <section class="section catalog no-padding-bottom">
+        <div class="tabs-holder catalog-tabs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-4">
+                        <!-- catalog aside start-->
+                        <div class="aside-holder"><span class="close-aside d-lg-none">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg></span>
+                            <aside class="catalog-aside">
+                                <div class="catalog-aside__inner">
+                                    <h4 class="title toggler">Catalog</h4>
+                                    <!-- tabs header start-->
+                                    <div class="tabs-header toggle-item"><span class="tabs-header__title"><span class="item">Windmill</span> <span class="count">57</span></span><span class="tabs-header__title"><span class="item">Solar Panels</span> <span class="count">90</span> </span><span class="tabs-header__title"><span class="item">Capacitor</span> <span class="count">25</span></span><span class="tabs-header__title"><span class="item">Inverters</span> <span class="count">85</span></span><span class="tabs-header__title"><span class="item">SWHS</span> <span class="count">61</span></span><span class="tabs-header__title"><span class="item">Heat Pumps</span> <span class="count">43</span></span><span class="tabs-header__title"><span class="item">Biogas Plants</span> <span class="count">12</span></span></div>
+                                    <!-- tabs header end-->
+                                </div>
+                                <form class="form form--primary form--catalog" action="javascript:void(0);">
+                                    <!-- price start-->
+                                    <fieldset class="price">
+                                        <h4 class="title toggler">Price</h4>
+                                        <div class="price-block toggle-item">
+                                            <input class="range-slider" type="text" name="price"/>
+                                            <div class="values-block">
+                                                <input class="range-value min" type="text" name="min-price" value="0" readonly="readonly"/><span class="separator"></span>
+                                                <input class="range-value max" type="text" name="max-price" value="10350" readonly="readonly"/>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                    <!-- price end-->
+                                    <!-- brands start-->
+                                    <fieldset class="brands">
+                                        <h4 class="title toggler">Brands</h4>
+                                        <div class="brands-block toggle-item">
+                                            <!-- item start-->
+                                            <div class="brand-item">
+                                                <label>
+                                                    <input class="checkbox checkbox--rounded" type="checkbox" name="brand" value="MaxSolar" checked="checked"/><span class="checkbox--rounded-mask"></span><span class="name">MaxSolar</span>
+                                                </label><span class="count">10</span>
+                                            </div>
+                                            <!-- item end-->
+                                            <!-- item start-->
+                                            <div class="brand-item">
+                                                <label>
+                                                    <input class="checkbox checkbox--rounded" type="checkbox" name="brand" value="Solarius"/><span class="checkbox--rounded-mask"></span><span class="name">Solarius</span>
+                                                </label><span class="count">25</span>
+                                            </div>
+                                            <!-- item end-->
+                                            <!-- item start-->
+                                            <div class="brand-item">
+                                                <label>
+                                                    <input class="checkbox checkbox--rounded" type="checkbox" name="brand" value="SunEnMax" checked="checked"/><span class="checkbox--rounded-mask"></span><span class="name">SunEnMax</span>
+                                                </label><span class="count">30</span>
+                                            </div>
+                                            <!-- item end-->
+                                            <!-- item start-->
+                                            <div class="brand-item">
+                                                <label>
+                                                    <input class="checkbox checkbox--rounded" type="checkbox" name="brand" value="Solarus"/><span class="checkbox--rounded-mask"></span><span class="name">Solarus</span>
+                                                </label><span class="count">15</span>
+                                            </div>
+                                            <!-- item end-->
+                                        </div>
+                                    </fieldset>
+                                    <!-- brands end-->
+                                    <!-- power start-->
+                                    <fieldset class="power">
+                                        <h4 class="title toggler">Power</h4>
+                                        <div class="power-block toggle-item">
+                                            <!-- item start-->
+                                            <div class="power-item">
+                                                <label>
+                                                    <input class="checkbox checkbox--primary" type="checkbox" name="power" value="4.4 kWp"/><span class="checkbox--primary-mask"></span><span class="name">4.4 kWp</span>
+                                                </label>
+                                            </div>
+                                            <!-- item end-->
+                                            <!-- item start-->
+                                            <div class="power-item">
+                                                <label>
+                                                    <input class="checkbox checkbox--primary" type="checkbox" name="power" value="6.6 kWp"/><span class="checkbox--primary-mask"></span><span class="name">6.6 kWp</span>
+                                                </label>
+                                            </div>
+                                            <!-- item end-->
+                                            <!-- item start-->
+                                            <div class="power-item">
+                                                <label>
+                                                    <input class="checkbox checkbox--primary" type="checkbox" name="power" value="8.8 kWp"/><span class="checkbox--primary-mask"></span><span class="name">8.8 kWp</span>
+                                                </label>
+                                            </div>
+                                            <!-- item end-->
+                                            <!-- item start-->
+                                            <div class="power-item">
+                                                <label>
+                                                    <input class="checkbox checkbox--primary" type="checkbox" name="power" value="11.0 kWp"/><span class="checkbox--primary-mask"></span><span class="name">11.0 kWp</span>
+                                                </label>
+                                            </div>
+                                            <!-- item end-->
+                                        </div>
+                                    </fieldset>
+                                    <!-- power end-->
+                                </form>
+                            </aside>
+                        </div>
+                        <!-- catalog aside end-->
+                    </div>
+                    <div class="col-xl-9 col-lg-8">
+                        <!-- catalog content start-->
+                        <div class="catalog-content">
+                            <!-- catalog header start-->
+                            <div class="catalog-header">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-6">
+                                        <div class="catalog-header__left">
+                                            <span class="catalog-header__text">Showing <span class="catalog-header__count">1-12</span> of <span class="catalog-header__total">85</span> products</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="catalog-header__right">
+                                            <div class="catalog-header__sort">
+                                                <select class="select">
+                                                    <option>Sort by: Popularity</option>
+                                                    <option>Sort by: Price</option>
+                                                    <option>Sort by: Rating</option>
+                                                </select>
+                                            </div>
+                                            <div class="catalog-header__view">
+                                                <span class="catalog-header__view-item active" data-view="grid">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#grid"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="catalog-header__view-item" data-view="list">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#list"></use>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- catalog header end-->
+                            
+                            <!-- catalog grid start-->
+                            <div class="catalog-grid">
+                                <div class="row">
+                                    <!-- product item start-->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="product-item">
+                                            <div class="product-item__img">
+                                                <a class="product-item__img-holder" href="{{ site.baseurl }}/product_page/">
+                                                    <img src="{{ site.baseurl }}/assets/orgone/1.jpg" alt="product"/>
+                                                </a>
+                                                <div class="product-item__badge badge badge--new">New</div>
+                                            </div>
+                                            <div class="product-item__content">
+                                                <h4 class="title"><a href="{{ site.baseurl }}/product_page/">Solar Panel MaxSolar 400W</a></h4>
+                                                <div class="product-item__price">
+                                                    <span class="product-item__price-new">₦45,000</span>
+                                                    <span class="product-item__price-old">₦52,000</span>
+                                                </div>
+                                                <div class="product-item__rating">
+                                                    <div class="rating">
+                                                        <span class="rating__item active"></span>
+                                                        <span class="rating__item active"></span>
+                                                        <span class="rating__item active"></span>
+                                                        <span class="rating__item active"></span>
+                                                        <span class="rating__item"></span>
+                                                    </div>
+                                                    <span class="rating__count">(4.2)</span>
+                                                </div>
+                                                <div class="product-item__actions">
+                                                    <button class="button button--filled" type="button">Add to Cart</button>
+                                                    <button class="button button--transparent" type="button">Quick View</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- product item end-->
+                                    
+                                    <!-- product item start-->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="product-item">
+                                            <div class="product-item__img">
+                                                <a class="product-item__img-holder" href="{{ site.baseurl }}/product_page/">
+                                                    <img src="{{ site.baseurl }}/assets/orgone/2.jpg" alt="product"/>
+                                                </a>
+                                                <div class="product-item__badge badge badge--hot">Hot</div>
+                                            </div>
+                                            <div class="product-item__content">
+                                                <h4 class="title"><a href="{{ site.baseurl }}/product_page/">Solar Inverter 5KVA</a></h4>
+                                                <div class="product-item__price">
+                                                    <span class="product-item__price-new">₦180,000</span>
+                                                </div>
+                                                <div class="product-item__rating">
+                                                    <div class="rating">
+                                                        <span class="rating__item active"></span>
+                                                        <span class="rating__item active"></span>
+                                                        <span class="rating__item active"></span>
+                                                        <span class="rating__item active"></span>
+                                                        <span class="rating__item active"></span>
+                                                    </div>
+                                                    <span class="rating__count">(4.8)</span>
+                                                </div>
+                                                <div class="product-item__actions">
+                                                    <button class="button button--filled" type="button">Add to Cart</button>
+                                                    <button class="button button--transparent" type="button">Quick View</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- product item end-->
+                                    
+                                    <!-- product item start-->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="product-item">
+                                            <div class="product-item__img">
+                                                <a class="product-item__img-holder" href="{{ site.baseurl }}/product_page/">
+                                                    <img src="{{ site.baseurl }}/assets/orgone/3.jpg" alt="product"/>
+                                                </a>
+                                                <div class="product-item__badge badge badge--sale">Sale</div>
+                                            </div>
+                                            <div class="product-item__content">
+                                                <h4 class="title"><a href="{{ site.baseurl }}/product_page/">Lithium Battery 100Ah</a></h4>
+                                                <div class="product-item__price">
+                                                    <span class="product-item__price-new">₦95,000</span>
+                                                    <span class="product-item__price-old">₦120,000</span>
+                                                </div>
+                                                <div class="product-item__rating">
+                                                    <div class="rating">
+                                                        <span class="rating__item active"></span>
+                                                        <span class="rating__item active"></span>
+                                                        <span class="rating__item active"></span>
+                                                        <span class="rating__item active"></span>
+                                                        <span class="rating__item"></span>
+                                                    </div>
+                                                    <span class="rating__count">(4.1)</span>
+                                                </div>
+                                                <div class="product-item__actions">
+                                                    <button class="button button--filled" type="button">Add to Cart</button>
+                                                    <button class="button button--transparent" type="button">Quick View</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- product item end-->
+                                </div>
+                            </div>
+                            <!-- catalog grid end-->
+                            
+                            <!-- pagination start-->
+                            <div class="pagination-holder">
+                                <ul class="pagination pagination--primary">
+                                    <li class="back disabled"><span>Back</span></li>
+                                    <li class="number current"><span>1</span></li>
+                                    <li class="number"><a href="#">2</a></li>
+                                    <li class="number"><a href="#">3</a></li>
+                                    <li class="next"><a href="#">Next</a></li>
+                                </ul>
+                            </div>
+                            <!-- pagination end-->
+                        </div>
+                        <!-- catalog content end-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- catalog end-->
+</main>
+

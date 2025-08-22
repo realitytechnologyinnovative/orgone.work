@@ -1,0 +1,478 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<main class="main">
+    <section class="promo-primary promo-primary--shop">
+        <div class="overlay"></div>
+        <picture>
+            <source srcset="/static/img/catalog-bg.jpg" media="(min-width: 992px)"/><img class="jarallax-img img-bg" src="/static/img/catalog-bg.jpg" alt="img"/>
+        </picture>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="align-container">
+                        <div class="align-item">
+                            <h1 class="title">Catalog Page</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- catalog start-->
+    <section class="section catalog no-padding-bottom">
+        <div class="tabs-holder catalog-tabs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-4">
+                        <!-- catalog aside start-->
+                        <div class="aside-holder"><span class="close-aside d-lg-none">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg></span>
+                            <aside class="catalog-aside">
+                                <div class="catalog-aside__inner">
+                                    <h4 class="title toggler">Catalog</h4>
+                                    <!-- tabs header start-->
+                                    <div class="tabs-header toggle-item"><span class="tabs-header__title"><span class="item">Windmill</span> <span class="count">57</span></span><span class="tabs-header__title"><span class="item">Solar Panels</span> <span class="count">90</span> </span><span class="tabs-header__title"><span class="item">Capacitor</span> <span class="count">25</span></span><span class="tabs-header__title"><span class="item">Inverters</span> <span class="count">85</span></span><span class="tabs-header__title"><span class="item">SWHS</span> <span class="count">61</span></span><span class="tabs-header__title"><span class="item">Heat Pumps</span> <span class="count">43</span></span><span class="tabs-header__title"><span class="item">Biogas Plants</span> <span class="count">12</span></span></div>
+                                    <!-- tabs header end-->
+                                </div>
+                                <form class="form form--primary form--catalog" action="javascript:void(0);">
+                                    <!-- price start-->
+                                    <fieldset class="price">
+                                        <h4 class="title toggler">Price</h4>
+                                        <div class="price-block toggle-item">
+                                            <input class="range-slider" type="text" name="price"/>
+                                            <div class="values-block">
+                                                <input class="range-value min" type="text" name="min-price" value="0" readonly="readonly"/><span class="separator"></span>
+                                                <input class="range-value max" type="text" name="max-price" value="10350" readonly="readonly"/>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                    <!-- price end-->
+                                    <!-- brands start-->
+                                    <fieldset class="brands">
+                                        <h4 class="title toggler">Brands</h4>
+                                        <div class="brands-block toggle-item">
+                                            <!-- item start-->
+                                            <div class="brand-item">
+                                                <label>
+                                                    <input class="checkbox checkbox--rounded" type="checkbox" name="brand" value="MaxSolar" checked="checked"/><span class="checkbox--rounded-mask"></span><span class="name">MaxSolar</span>
+                                                </label><span class="count">10</span>
+                                            </div>
+                                            <!-- item end-->
+                                            <!-- item start-->
+                                            <div class="brand-item">
+                                                <label>
+                                                    <input class="checkbox checkbox--rounded" type="checkbox" name="brand" value="Solarius"/><span class="checkbox--rounded-mask"></span><span class="name">Solarius</span>
+                                                </label><span class="count">25</span>
+                                            </div>
+                                            <!-- item end-->
+                                            <!-- item start-->
+                                            <div class="brand-item">
+                                                <label>
+                                                    <input class="checkbox checkbox--rounded" type="checkbox" name="brand" value="SunEnMax" checked="checked"/><span class="checkbox--rounded-mask"></span><span class="name">SunEnMax</span>
+                                                </label><span class="count">30</span>
+                                            </div>
+                                            <!-- item end-->
+                                            <!-- item start-->
+                                            <div class="brand-item">
+                                                <label>
+                                                    <input class="checkbox checkbox--rounded" type="checkbox" name="brand" value="Solarus"/><span class="checkbox--rounded-mask"></span><span class="name">Solarus</span>
+                                                </label><span class="count">15</span>
+                                            </div>
+                                            <!-- item end-->
+                                        </div>
+                                    </fieldset>
+                                    <!-- brands end-->
+                                    <!-- power start-->
+                                    <fieldset class="power">
+                                        <h4 class="title toggler">Power</h4>
+                                        <div class="power-block toggle-item">
+                                            <!-- item start-->
+                                            <div class="power-item">
+                                                <label>
+                                                    <input class="checkbox checkbox--primary" type="checkbox" name="power" value="4.4 kWp"/><span class="checkbox--primary-mask"></span><span class="name">4.4 kWp</span>
+                                                </label>
+                                            </div>
+                                            <!-- item end-->
+                                            <!-- item start-->
+                                            <div class="power-item">
+                                                <label>
+                                                    <input class="checkbox checkbox--primary" type="checkbox" name="power" value="4.8 kWp"/><span class="checkbox--primary-mask"></span><span class="name">4.8 kWp</span>
+                                                </label>
+                                            </div>
+                                            <!-- item end-->
+                                            <!-- item start-->
+                                            <div class="power-item">
+                                                <label>
+                                                    <input class="checkbox checkbox--primary" type="checkbox" name="power" value="5.0 kWp" checked="checked"/><span class="checkbox--primary-mask"></span><span class="name">5.0 kWp</span>
+                                                </label>
+                                            </div>
+                                            <!-- item end-->
+                                            <!-- item start-->
+                                            <div class="power-item">
+                                                <label>
+                                                    <input class="checkbox checkbox--primary" type="checkbox" name="power" value="5.2 kWp"/><span class="checkbox--primary-mask"></span><span class="name">5.2 kWp</span>
+                                                </label>
+                                            </div>
+                                            <!-- item end-->
+                                            <!-- item start-->
+                                            <div class="power-item">
+                                                <label>
+                                                    <input class="checkbox checkbox--primary" type="checkbox" name="power" value="5.2 kWp"/><span class="checkbox--primary-mask"></span><span class="name">5.2 kWp</span>
+                                                </label>
+                                            </div>
+                                            <!-- item end-->
+                                            <!-- item start-->
+                                            <div class="power-item">
+                                                <label>
+                                                    <input class="checkbox checkbox--primary" type="checkbox" name="power" value="5.6 kWp" checked="checked"/><span class="checkbox--primary-mask"></span><span class="name">5.6 kWp</span>
+                                                </label>
+                                            </div>
+                                            <!-- item end-->
+                                            <!-- item start-->
+                                            <div class="power-item">
+                                                <label>
+                                                    <input class="checkbox checkbox--primary" type="checkbox" name="power" value="5.8 kWp" checked="checked"/><span class="checkbox--primary-mask"></span><span class="name">5.8 kWp</span>
+                                                </label>
+                                            </div>
+                                            <!-- item end-->
+                                            <!-- item start-->
+                                            <div class="power-item">
+                                                <label>
+                                                    <input class="checkbox checkbox--primary" type="checkbox" name="power" value="6.0 kWp"/><span class="checkbox--primary-mask"></span><span class="name">6.0 kWp</span>
+                                                </label>
+                                            </div>
+                                            <!-- item end-->
+                                        </div>
+                                    </fieldset>
+                                    <!-- power end-->
+                                    <!-- colors start-->
+                                    <fieldset class="colors">
+                                        <h4 class="title toggler">Colors</h4>
+                                        <div class="colors-block toggle-item">
+                                            <!-- item start-->
+                                            <div class="color-item">
+                                                <label>
+                                                    <input class="checkbox checkbox--color" type="checkbox" name="color" value="#ED1A2D"/><span class="checkbox--color-mask" style="background-color: #ED1A2D;"></span>
+                                                </label>
+                                            </div>
+                                            <!-- item end-->
+                                            <!-- item start-->
+                                            <div class="color-item">
+                                                <label>
+                                                    <input class="checkbox checkbox--color" type="checkbox" name="color" value="#FFB00D"/><span class="checkbox--color-mask" style="background-color: #FFB00D;"></span>
+                                                </label>
+                                            </div>
+                                            <!-- item end-->
+                                            <!-- item start-->
+                                            <div class="color-item">
+                                                <label>
+                                                    <input class="checkbox checkbox--color" type="checkbox" name="color" value="#7830F4" checked="checked"/><span class="checkbox--color-mask" style="background-color: #7830F4;"></span>
+                                                </label>
+                                            </div>
+                                            <!-- item end-->
+                                            <!-- item start-->
+                                            <div class="color-item">
+                                                <label>
+                                                    <input class="checkbox checkbox--color" type="checkbox" name="color" value="#FF933B"/><span class="checkbox--color-mask" style="background-color: #FF933B;"></span>
+                                                </label>
+                                            </div>
+                                            <!-- item end-->
+                                            <!-- item start-->
+                                            <div class="color-item">
+                                                <label>
+                                                    <input class="checkbox checkbox--color" type="checkbox" name="color" value="#22A86D"/><span class="checkbox--color-mask" style="background-color: #22A86D;"></span>
+                                                </label>
+                                            </div>
+                                            <!-- item end-->
+                                            <!-- item start-->
+                                            <div class="color-item">
+                                                <label>
+                                                    <input class="checkbox checkbox--color" type="checkbox" name="color" value="#262626" checked="checked"/><span class="checkbox--color-mask" style="background-color: #262626;"></span>
+                                                </label>
+                                            </div>
+                                            <!-- item end-->
+                                            <!-- item start-->
+                                            <div class="color-item">
+                                                <label>
+                                                    <input class="checkbox checkbox--color" type="checkbox" name="color" value="#787878"/><span class="checkbox--color-mask" style="background-color: #787878;"></span>
+                                                </label>
+                                            </div>
+                                            <!-- item end-->
+                                            <!-- item start-->
+                                            <div class="color-item">
+                                                <label>
+                                                    <input class="checkbox checkbox--color" type="checkbox" name="color" value="#8CC34B"/><span class="checkbox--color-mask" style="background-color: #8CC34B;"></span>
+                                                </label>
+                                            </div>
+                                            <!-- item end-->
+                                            <!-- item start-->
+                                            <div class="color-item">
+                                                <label>
+                                                    <input class="checkbox checkbox--color" type="checkbox" name="color" value="#143BE7" checked="checked"/><span class="checkbox--color-mask" style="background-color: #143BE7;"></span>
+                                                </label>
+                                            </div>
+                                            <!-- item end-->
+                                            <!-- item start-->
+                                            <div class="color-item">
+                                                <label>
+                                                    <input class="checkbox checkbox--color" type="checkbox" name="color" value="#E6E6E6"/><span class="checkbox--color-mask" style="background-color: #E6E6E6;"></span>
+                                                </label>
+                                            </div>
+                                            <!-- item end-->
+                                        </div>
+                                    </fieldset>
+                                    <!-- colors end-->
+                                    <div class="tags">
+                                        <h4 class="title toggler">Tags</h4>
+                                        <div class="tags-block toggle-item"><span class="tag">Solar<span class="close">
+                                            <svg class="icon">
+                                                <use xlink:href="#close"></use>
+                                            </svg></span></span><span class="tag">Windmill<span class="close">
+                                            <svg class="icon">
+                                                <use xlink:href="#close"></use>
+                                            </svg></span></span><span class="tag">Power<span class="close">
+                                            <svg class="icon">
+                                                <use xlink:href="#close"></use>
+                                            </svg></span></span><span class="tag">SWHS<span class="close">
+                                            <svg class="icon">
+                                                <use xlink:href="#close"></use>
+                                            </svg></span></span><span class="tag">Conservation<span class="close">
+                                            <svg class="icon">
+                                                <use xlink:href="#close"></use>
+                                            </svg></span></span></div>
+                                    </div>
+                                    <!-- button block start-->
+                                    <fieldset class="button-block">
+                                        <button class="button button--transparent" type="submit" data-hover="Apply Filters"><span>Apply Filters</span></button>
+                                    </fieldset>
+                                    <!-- button block end-->
+                                </form>
+                            </aside>
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-lg-8">
+                        <div class="row d-lg-none">
+                            <div class="col-12">
+                                <div class="filter-trigger">
+                                    <svg class="icon">
+                                        <use xlink:href="#controls"></use>
+                                    </svg><span class="title">Filters</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tabs content start-->
+                        <div class="tabs-content">
+                            <!-- tabs content item start-->
+                            <div class="tabs-content__item">
+                                <div class="row offset-margin">
+                                    <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
+                                        <!-- item start-->
+                                        <figure class="product-item product-item--primary"><a class="img-holder" href="shop-product.html"><img src="/static/img/product-1.png" alt="product"/></a>
+                                            <figcaption><span class="description price">$ 1250.00</span>
+                                                <h4 class="title"><a href="">DUOMAX twin-DEG5C.07(II)</a></h4><a class="with--line" href="#"><span>Add to cart</span></a>
+                                            </figcaption>
+                                        </figure>
+                                        <!-- item end-->
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="pagination-holder">
+                                            <!-- pagination start-->
+                                            <ul class="pagination pagination--primary">
+                                                <li class="back"><a href="#">Back</a></li>
+                                                <li class="number current"><a href="#">1</a></li>
+                                                <li class="number"><a href="#">2</a></li>
+                                                <li class="number"><a href="#">3</a></li>
+                                                <li class="number"><a href="#">4</a></li>
+                                                <li class="number"><a href="#">5</a></li>
+                                                <li class="next"><a href="#">Next</a></li>
+                                            </ul>
+                                            <!-- pagination end-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- tabs content item end-->
+                            <!-- tabs content item start-->
+                            <div class="tabs-content__item">
+                                <div class="row offset-margin">
+                                    <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
+                                        <!-- item start-->
+                                        <figure class="product-item product-item--primary"><a class="img-holder" href="shop-product.html"><span class="product-item__badge badge badge--new">New</span><img src="/static/img/product-1.png" alt="product"/></a>
+                                            <figcaption><span class="price">$ 1250.00</span>
+                                                <h4 class="title"><a href="shop-product.html">DUOMAX twin-DEG5C.07(II)</a></h4><a class="with--line" href="#"><span>Add to cart</span></a>
+                                            </figcaption>
+                                        </figure>
+                                        <!-- item end-->
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
+                                        <!-- item start-->
+                                        <figure class="product-item product-item--primary"><a class="img-holder" href="shop-product.html"><span class="product-item__badge badge badge--hot">Hot</span><img src="/static/img/product-2.png" alt="product"/></a>
+                                            <figcaption><span class="price">$ 900.00</span>
+                                                <h4 class="title"><a href="shop-product.html">DUOMAX-PEG5.07</a></h4><a class="with--line" href="#"><span>Add to cart</span></a>
+                                            </figcaption>
+                                        </figure>
+                                        <!-- item end-->
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
+                                        <!-- item start-->
+                                        <figure class="product-item product-item--primary"><a class="img-holder" href="shop-product.html"><img src="/static/img/product-9.png" alt="product"/></a>
+                                            <figcaption><span class="price">$ 950.00</span>
+                                                <h4 class="title"><a href="shop-product.html">DUOMAX-PEG40.07</a></h4><a class="with--line" href="#"><span>Add to cart</span></a>
+                                            </figcaption>
+                                        </figure>
+                                        <!-- item end-->
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
+                                        <!-- item start-->
+                                        <figure class="product-item product-item--primary"><a class="img-holder" href="shop-product.html"><img src="/static/img/product-4.png" alt="product"/></a>
+                                            <figcaption><span class="price">$ 1150.00</span>
+                                                <h4 class="title"><a href="shop-product.html">DUOMAX M PLUS - DEG5(II)</a></h4><a class="with--line" href="#"><span>Add to cart</span></a>
+                                            </figcaption>
+                                        </figure>
+                                        <!-- item end-->
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
+                                        <!-- item start-->
+                                        <figure class="product-item product-item--primary"><a class="img-holder" href="shop-product.html"><span class="product-item__badge badge badge--sale">Sale</span><img src="/static/img/product-6.png" alt="product"/></a>
+                                            <figcaption>
+                                                <s>$ 1200.00</s><span class="price">$ 850.00</span>
+                                                <h4 class="title"><a href="shop-product.html">DUOMAX M PLUS-DEG5.07(II)</a></h4><a class="with--line" href="#"><span>Add to cart</span></a>
+                                            </figcaption>
+                                        </figure>
+                                        <!-- item end-->
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
+                                        <!-- item start-->
+                                        <figure class="product-item product-item--primary"><a class="img-holder" href="shop-product.html"><img src="/static/img/product-7.png" alt="product"/></a>
+                                            <figcaption><span class="price">$ 900.00</span>
+                                                <h4 class="title"><a href="shop-product.html">DUOMAX-PEG5.07</a></h4><a class="with--line" href="#"><span>Add to cart</span></a>
+                                            </figcaption>
+                                        </figure>
+                                        <!-- item end-->
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
+                                        <!-- item start-->
+                                        <figure class="product-item product-item--primary"><a class="img-holder" href="shop-product.html"><img src="/static/img/product-1.png" alt="product"/></a>
+                                            <figcaption><span class="price">$ 1250.00</span>
+                                                <h4 class="title"><a href="shop-product.html">DUOMAX twin-DEG5C.07(II)</a></h4><a class="with--line" href="#"><span>Add to cart</span></a>
+                                            </figcaption>
+                                        </figure>
+                                        <!-- item end-->
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
+                                        <!-- item start-->
+                                        <figure class="product-item product-item--primary"><a class="img-holder" href="shop-product.html"><img src="/static/img/product-2.png" alt="product"/></a>
+                                            <figcaption><span class="price">$ 900.00</span>
+                                                <h4 class="title"><a href="shop-product.html">DUOMAX-PEG5.07</a></h4><a class="with--line" href="#"><span>Add to cart</span></a>
+                                            </figcaption>
+                                        </figure>
+                                        <!-- item end-->
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
+                                        <!-- item start-->
+                                        <figure class="product-item product-item--primary"><a class="img-holder" href="shop-product.html"><img src="/static/img/product-9.png" alt="product"/></a>
+                                            <figcaption><span class="price">$ 950.00</span>
+                                                <h4 class="title"><a href="shop-product.html">DUOMAX-PEG40.07</a></h4><a class="with--line" href="#"><span>Add to cart</span></a>
+                                            </figcaption>
+                                        </figure>
+                                        <!-- item end-->
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
+                                        <!-- item start-->
+                                        <figure class="product-item product-item--primary"><a class="img-holder" href="shop-product.html"><span class="product-item__badge badge badge--discount">- 10%</span><img src="/static/img/product-4.png" alt="product"/></a>
+                                            <figcaption><span class="price">$ 1150.00</span>
+                                                <h4 class="title"><a href="shop-product.html">DUOMAX M PLUS - DEG5(II)</a></h4><a class="with--line" href="#"><span>Add to cart</span></a>
+                                            </figcaption>
+                                        </figure>
+                                        <!-- item end-->
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
+                                        <!-- item start-->
+                                        <figure class="product-item product-item--primary"><a class="img-holder" href="shop-product.html"><img src="/static/img/product-6.png" alt="product"/></a>
+                                            <figcaption><span class="price">$ 850.00</span>
+                                                <h4 class="title"><a href="shop-product.html">DUOMAX M PLUS-DEG5.07(II)</a></h4><a class="with--line" href="#"><span>Add to cart</span></a>
+                                            </figcaption>
+                                        </figure>
+                                        <!-- item end-->
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6">
+                                        <!-- item start-->
+                                        <figure class="product-item product-item--primary"><a class="img-holder" href="shop-product.html"><img src="/static/img/product-7.png" alt="product"/></a>
+                                            <figcaption><span class="price">$ 900.00</span>
+                                                <h4 class="title"><a href="shop-product.html">DUOMAX-PEG5.07</a></h4><a class="with--line" href="#"><span>Add to cart</span></a>
+                                            </figcaption>
+                                        </figure>
+                                        <!-- item end-->
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="pagination-holder">
+                                            <!-- pagination start-->
+                                            <ul class="pagination pagination--primary">
+                                                <li class="back"><a href="#">Back</a></li>
+                                                <li class="number current"><a href="#">1</a></li>
+                                                <li class="number"><a href="#">2</a></li>
+                                                <li class="number"><a href="#">3</a></li>
+                                                <li class="number"><a href="#">4</a></li>
+                                                <li class="number"><a href="#">5</a></li>
+                                                <li class="next"><a href="#">Next</a></li>
+                                            </ul>
+                                            <!-- pagination end-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- tabs content item end-->
+                            <!-- tabs content end-->
+                        </div>
+                    </div>
+                    <!-- catalog aside end-->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- catalog end-->
+    <!-- relevant start-->
+    <section class="section relevant">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="relevant-holder">
+                        <!-- relevant item start-->
+                        <div class="relevant-item" style="background-image: url('/static/img/relevant-bg.jpg');">
+                            <div class="text-holder"><span class="ribbon event">Event</span>
+                                <h2 class="title">6 Reasong</h2>
+                                <div class="inner-text">
+                                    <p>to buy your solar panels</p>
+                                </div><a class="button button--filled" href="#" data-hover="Buy Your Panels"><span>Buy Your Panels</span></a>
+                            </div>
+                            <div class="img-holder"><img src="/static/img/relevant-img-1.png" alt="img"/></div>
+                        </div>
+                        <!-- relevant item end-->
+                        <!-- relevant item start-->
+                        <div class="relevant-item">
+                            <div class="text-holder"><span class="ribbon discount">-25%</span>
+                                <h2 class="title">SoLar-345x</h2>
+                                <div class="inner-text">
+                                    <p>Buy your future is now!</p>
+                                </div><a class="button button--filled" href="#" data-hover="Detail"><span>Detail</span></a>
+                            </div><img src="/static/img/relevant-img-2.png" alt="img"/>
+                        </div>
+                        <!-- relevant item end-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- relevant end-->
+    <div class="filter-backdrop"></div>
+</main>
+{% endblock content %}
+

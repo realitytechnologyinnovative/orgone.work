@@ -1,0 +1,60 @@
+---
+layout: default
+title: Sign Up
+---
+
+<main class="main">
+    <section class="account-elements">
+        <div class="container">
+            <div class="row offset-margin">
+                <div class="col-xl-6 col-lg-6 col-md-8 mx-auto">
+                    <!-- sign-up start-->
+                    <form class="form--primary account--form" method="post">
+                        <div class="row">
+                            <div class="col-12">
+                                <h4 class="form-title">Sign Up</h4>
+                            </div>
+                            <div class="col-12">
+                                <label class="input-label">
+                                    <input class="form-field input input-email" type="email" name="email" required="required"/>
+                                    <span>Email</span>
+                                </label>
+                            </div>
+                            <div class="col-12">
+                                <label class="input-label">
+                                    <input class="form-field input input-password" id="password-field_2" type="password" name="password" required="required"/>
+                                    <span>Password</span>
+                                    <div class="password-trigger" toggle="#password-field_2">
+                                        <svg class="icon">
+                                            <use xlink:href="#eye"></use>
+                                        </svg>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="col-12">
+                                <label class="input-label">
+                                    <input class="form-field input input-password" id="password-field_3" type="password" name="confirm_password" required="required"/>
+                                    <span>Confirm Password</span>
+                                    <div class="password-trigger" toggle="#password-field_3">
+                                        <svg class="icon">
+                                            <use xlink:href="#eye"></use>
+                                        </svg>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="col-12"><span>I agree with <a href="{{ site.baseurl }}/terms_and_condition/">Terms of Services</a></span></div>
+                            <div class="col-12">
+                                <div class="button-holder">
+                                    <button class="button button--transparent" type="submit" data-hover="Sign up"><span>Sign up</span></button>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center"><span><a href="{{ site.baseurl }}/signin/">Sign in</a> if you have an account</span></div>
+                        </div>
+                    </form>
+                    <!-- sign-up end-->
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+

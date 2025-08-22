@@ -1,0 +1,30 @@
+{% if messages %}
+  <div class="row">
+    <div class="col-12">
+      {% for message in messages %}
+        <div class="alert alert--linear alert--{{ message.tags }}">
+          <span class="alert-icon">
+            {% if message.level_tag == 'success' %}
+              <svg class="icon"><use xlink:href="#confirm"></use></svg>
+            {% elif message.level_tag == 'error' %}
+              <svg class="icon"><use xlink:href="#close"></use></svg>
+            {% elif message.level_tag == 'warning' %}
+              !
+            {% elif message.level_tag == 'info' %}
+              ?
+            {% else %}
+              i
+            {% endif %}
+          </span>
+          <div class="text">
+            <span class="title">{{ message.level_tag|capfirst }}!</span>
+            <span>{{ message }}</span>
+          </div>
+          <span class="close">
+            <svg class="icon"><use xlink:href="#close"></use></svg>
+          </span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
